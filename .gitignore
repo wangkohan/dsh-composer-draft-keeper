@@ -1,0 +1,11 @@
+# 调研中间产物（宿主 asar 清单、切出来的宿主源码），4MB+，不进仓库
+docs/_tmp*
+
+# 测试临时输出
+test/.debug/
+*.log
+
+# 系统
+.DS_Store
+Thumbs.db
+node_modules/

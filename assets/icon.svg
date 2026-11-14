@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180" role="img" aria-label="dsh-composer-draft-keeper">
+  <title>dsh-composer-draft-keeper</title>
+  <!-- 圆角底板：DSH 插件图标惯例 -->
+  <rect width="180" height="180" rx="40" ry="40" fill="#16202E"/>
+  <!-- 草稿纸：一张卡片，代表"还没发出去的那段字" -->
+  <rect x="44" y="34" width="92" height="112" rx="12" ry="12" fill="#F7F9FC"/>
+  <!-- 书签缎带：把草稿"别住"了 -->
+  <path d="M96 34 H124 V92 L110 81 L96 92 Z" fill="#3B7BFF"/>
+  <!-- 两行正文：示意文本内容 -->
+  <rect x="60" y="102" width="56" height="8" rx="4" fill="#C3CEDD"/>
+  <rect x="60" y="118" width="36" height="8" rx="4" fill="#C3CEDD"/>
+</svg>

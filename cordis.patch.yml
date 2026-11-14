@@ -1,0 +1,6 @@
+# 让 Loader 以独立插件行装载 dsh-composer-draft-keeper。
+# 只 insert 一行，不碰任何官方行 —— 卸载即完全恢复（BRIEF §8）。
+# name 必须逐字等于 package.json 的 name（清单 A2）；id 是 Loader 行 id，全 profile 内唯一即可。
+- insert:
+    - id: draft-keeper
+      name: dsh-composer-draft-keeper

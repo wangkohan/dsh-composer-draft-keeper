@@ -1,0 +1,26 @@
+# awesome-dsh-plugin 市场条目（提交时用，只加这一个文件）
+# 目标路径：data/plugins/wangkohan__dsh-composer-draft-keeper.yml
+#
+# 注意：
+# - url 必须与仓库地址完全一致（清单 A9）
+# - name 是列表链接文字，写 owner/repo
+# - category 用 session（同赛道先例：ne-ilyxa/dsh-session-drafts、SiriLee/dsh-rewind）
+# - description.en 必填、以句号结尾；含英文冒号+空格必须整段单引号（本节无此问题）
+# - description 必须与代码逐条一致：只写核心 3 条（跨会话 / 不回灌 / 重启还在）
+#   「10 条历史」「256KB」「设置页」这些增强项等真机验证通过后再决定要不要加
+
+url: https://github.com/wangkohan/dsh-composer-draft-keeper
+name: wangkohan/dsh-composer-draft-keeper
+category: session
+description:
+  en: Keeps unsent composer text as a per-session draft in local storage, so it comes back after you switch sessions, switch pages, or restart the app; a sent or deliberately cleared draft does not come back.
+  zh: 把未发送的文本草稿按会话存在本机，切会话、切页面、乃至重启应用之后回来仍在；已经发出或主动清空的草稿不会回灌。
+
+# ── 自检记录（提交前逐条核，A10 是头号退回原因） ──
+# [x] 跨会话保留        → decideRestore 双闸门（test/acceptance A1）
+# [x] 切页面回来还在     → 同上，镜像按 session 独立
+# [x] 重启后仍在         → localStorage 镜像，非 sessionStorage（A3）
+# [x] 已发送不回灌       → inflight 标记 + consumedAt（A2/A2b 实测 0 回灌）
+# [x] 主动清空不回灌     → clearAll / removeDraft 同时清镜像与历史
+# [ ] 「per-workspace」   → 未写进描述。实现主键是 sessionId，cwd 只作记录字段，
+#                          写 per-workspace 属于夸大风险（A10）
